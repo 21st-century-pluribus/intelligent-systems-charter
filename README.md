@@ -69,4 +69,4 @@ Copyright 2026 21st Century Pluribus.
 
 ## Maintainer
 
-[21st Century Pluribus](https://github.com/21st-century-pluribus) · pluribus@intelligentsystemscharter.org
+[21st Century Pluribus](https://github.com/21st-century-pluribus) · [@Modern_Pluribus on X](https://x.com/Modern_Pluribus) · pluribus@intelligentsystemscharter.org

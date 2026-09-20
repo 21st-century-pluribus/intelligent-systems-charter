@@ -35,4 +35,6 @@ The site is built directly from the Markdown files in the repository, which are 
 
 ## Contact
 
-[pluribus@intelligentsystemscharter.org](mailto:pluribus@intelligentsystemscharter.org)
+- Email: [pluribus@intelligentsystemscharter.org](mailto:pluribus@intelligentsystemscharter.org)
+- X: [@Modern_Pluribus](https://x.com/Modern_Pluribus)
+- GitHub: [21st-century-pluribus](https://github.com/21st-century-pluribus)
