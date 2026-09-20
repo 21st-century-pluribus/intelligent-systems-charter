@@ -26,7 +26,7 @@ Most charters for intelligent systems are promises. This one is a promise with a
 
 ## Website
 
-The site at [intelligentsystemscharter.org](https://www.intelligentsystemscharter.org) is built from this repository. The Markdown files at the root are the canonical texts and are never edited for the site. Everything web-related lives in `site/`:
+The site at [intelligentsystemscharter.org](https://intelligentsystemscharter.org) is built from this repository. The Markdown files at the root are the canonical texts and are never edited for the site. Everything web-related lives in `site/`:
 
 | Path | What it is |
 | --- | --- |
