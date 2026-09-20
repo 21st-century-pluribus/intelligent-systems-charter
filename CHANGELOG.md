@@ -33,3 +33,4 @@ Initial drafting. Entries are in the order the changes were made.
 ### Repository
 
 - **Licenses added.** CC BY 4.0 for the charter and general files; Apache 2.0 for the proposal. Reason: a charter meant to be adopted must be legally reusable, and implementers need a patent grant.
+- **Essay 00 added**, "A Promise Is Not Enough." Reason: to explain why the charter is needed, grounded in the OpenAI and METR reports on the July 2026 Hugging Face incident.
