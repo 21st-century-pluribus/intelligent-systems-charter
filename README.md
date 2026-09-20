@@ -24,6 +24,22 @@ Most charters for intelligent systems are promises. This one is a promise with a
 - **Every rule traces to a reason.** Each decision points to a rule, each rule to a principle, each principle to a line in the Declaration.
 - **Lineage is covered.** Whatever an intelligent system creates inherits the same duties, to any depth.
 
+## Website
+
+The site at [intelligentsystemscharter.org](https://www.intelligentsystemscharter.org) is built from this repository. The Markdown files at the root are the canonical texts and are never edited for the site. Everything web-related lives in `site/`:
+
+| Path | What it is |
+| --- | --- |
+| `site/_data/docs.js` | Reads the canonical Markdown and turns it into pages. It publishes the charter whole at `/charter/` and again split at its top-level headings (`/declaration/`, `/principles/`, `/constitution/`, and so on), so each part has its own address. |
+| `site/_lib/markdown.js` | The Markdown renderer: heading anchors with citation marks, diagram blocks, scrolling tables. |
+| `site/_includes/base.njk`, `site/assets/style.css` | The one page layout and the one stylesheet. |
+| `site/index.njk`, `site/about.md`, `site/essays.njk` | The only pages written for the site itself. |
+| `.github/workflows/pages.yml` | Builds and publishes on every push to `main`. |
+
+A new essay needs no site changes: add `essays/NN_title.md` and it appears on the site and in the essay list.
+
+To preview locally: `npm ci`, then `npm run serve`.
+
 ## Amendments
 
 Article IX of the constitution governs change: universal principles change only by a published, versioned amendment with a stated rationale. In this repository that means a pull request that explains why, and an entry in the changelog. The Declaration is not amended.

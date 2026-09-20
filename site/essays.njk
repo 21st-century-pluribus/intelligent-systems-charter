@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: Essays
+permalink: /essays/
+kind: essays
+---
+<h1>Essays</h1>
+<p class="lead">Arguments for the charter, and about it. Each essay separates what its sources report from what its author argues.</p>
+<ol class="essay-list">
+{% for d in docs %}{% if d.kind == "essay" %}
+  <li><span class="essay-number">Essay {{ d.number }}</span><a href="{{ d.url }}">{{ d.title }}</a></li>
+{% endif %}{% endfor %}
+</ol>

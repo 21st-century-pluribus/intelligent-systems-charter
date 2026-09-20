@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and title != site.title %}{{ title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body class="kind-{{ kind or 'page' }} at{{ page.url | replace('/', '-') }}">
+<a class="skip" href="#main">Skip to the text</a>
+
+<header class="masthead">
+  <a class="wordmark" href="/">{{ site.title }}</a>
+  <nav aria-label="Site">
+    <ul>
+      <li><a href="/declaration/"{% if page.url == '/declaration/' %} aria-current="page"{% endif %}>Declaration</a></li>
+      <li><a href="/principles/"{% if page.url == '/principles/' %} aria-current="page"{% endif %}>Principles</a></li>
+      <li><a href="/constitution/"{% if page.url == '/constitution/' %} aria-current="page"{% endif %}>Constitution</a></li>
+      <li><a href="/how-it-works/"{% if page.url == '/how-it-works/' %} aria-current="page"{% endif %}>How it works</a></li>
+      <li><a href="/proposal/"{% if page.url == '/proposal/' %} aria-current="page"{% endif %}>Proposal</a></li>
+      <li><a href="/essays/"{% if '/essays/' in page.url %} aria-current="page"{% endif %}>Essays</a></li>
+      <li><a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="frame">
+  {% if toc and toc.length %}
+  <details class="toc toc-narrow">
+    <summary>On this page</summary>
+    <ol>{% for item in toc %}<li><a href="#{{ item.id }}">{{ item.text }}</a></li>{% endfor %}</ol>
+  </details>
+  <nav class="toc toc-wide" aria-label="On this page">
+    <p>On this page</p>
+    <ol>{% for item in toc %}<li><a href="#{{ item.id }}">{{ item.text }}</a></li>{% endfor %}</ol>
+  </nav>
+  {% endif %}
+
+  <article class="text">
+    {% if doc and doc.partOf %}<p class="part-of">From the <a href="{{ doc.partOf.url }}">{{ doc.partOf.title }}</a></p>{% endif %}
+    {{ content | safe }}
+
+    {% if doc and (doc.prev or doc.next) %}
+    <nav class="sequence" aria-label="Charter sections">
+      {% if doc.prev %}<a rel="prev" href="{{ doc.prev.url }}"><span>Previous</span>{{ doc.prev.title }}</a>{% else %}<span></span>{% endif %}
+      {% if doc.next %}<a rel="next" href="{{ doc.next.url }}"><span>Next</span>{{ doc.next.title }}</a>{% endif %}
+    </nav>
+    {% endif %}
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>{{ site.title }}, version {{ site.version }}. Maintained by {{ site.author }}.
+  {% if sourcePath %}The canonical text of this page is <a href="{{ site.repo }}/blob/main/{{ sourcePath }}"><code>{{ sourcePath }}</code></a> in the <a href="{{ site.repo }}">public repository</a>.{% else %}Source in the <a href="{{ site.repo }}">public repository</a>.{% endif %}</p>
+  <p>The charter is free to share and adapt under <a href="/license/charter-cc-by-4.0.txt">CC BY 4.0</a>. The proposal is under the <a href="/license/proposal-apache-2.0.txt">Apache License 2.0</a>. <a href="/changelog/">Changelog</a>. <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  <p>This site sets no cookies and runs no analytics.</p>
+</footer>
+
+{% if hasMermaid %}
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  mermaid.initialize({ startOnLoad: true, securityLevel: "strict", theme: dark ? "dark" : "neutral", fontFamily: "inherit" });
+</script>
+{% endif %}
+</body>
+</html>

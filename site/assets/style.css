@@ -1,0 +1,159 @@
+/* Intelligent Systems Charter
+   A reading site. System typefaces only, so nothing is fetched from a third party.
+   The one decorative idea is borrowed from old legal and liturgical books, where
+   rules were marked in red in the margin: a "rubric". Every heading carries a red
+   section mark that is also its permanent link, because a charter is meant to be cited. */
+
+:root {
+  --paper: #fbfcfa;
+  --ink: #16202a;
+  --quiet: #55626e;
+  --rule: #d8ded9;
+  --wash: #f0f3ef;
+  --rubric: #8c1d2c;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --measure: 40rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #12171c; --ink: #e4e8e3; --quiet: #9aa6b0; --rule: #2b343c; --wash: #1a2128; --rubric: #e6818f; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 1.5rem; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--serif); font-size: 1.125rem; line-height: 1.68;
+  text-rendering: optimizeLegibility; font-kerning: normal;
+}
+a { color: inherit; text-decoration-color: var(--rubric); text-decoration-thickness: 0.06em; text-underline-offset: 0.18em; }
+a:hover { color: var(--rubric); }
+:focus-visible { outline: 2px solid var(--rubric); outline-offset: 3px; border-radius: 2px; }
+.skip { position: absolute; left: -999rem; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: 0.4rem 0.7rem; z-index: 10; }
+
+/* Masthead */
+.masthead {
+  max-width: 68rem; margin: 0 auto; padding: 1.6rem 1.5rem 1.2rem;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 2.5rem;
+  border-bottom: 1px solid var(--rule); font-family: var(--sans);
+}
+.wordmark { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.005em; text-decoration: none; }
+.masthead ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1.35rem; font-size: 0.95rem; }
+.masthead nav a { text-decoration: none; color: var(--quiet); padding: 0.15rem 0; }
+.masthead nav a:hover { color: var(--rubric); }
+.masthead nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--rubric); }
+
+/* Frame: text column with a margin on the left for the rubrics, contents on the right when there is room */
+.frame { max-width: 68rem; margin: 0 auto; padding: 2.75rem 1.5rem 4rem; }
+.text { max-width: var(--measure); }
+.toc-wide { display: none; }
+@media (min-width: 64rem) {
+  .frame { display: grid; grid-template-columns: minmax(0, var(--measure)) 15rem; column-gap: 5rem; padding-left: 5.5rem; }
+  .text { grid-column: 1; grid-row: 1; }
+  .toc-narrow { display: none; }
+  .toc-wide { display: block; grid-column: 2; grid-row: 1; align-self: start; position: sticky; top: 2rem; max-height: calc(100vh - 4rem); overflow: auto; }
+}
+
+/* Contents */
+.toc { font-family: var(--sans); font-size: 0.9rem; line-height: 1.4; }
+.toc p, .toc summary { margin: 0 0 0.7rem; color: var(--quiet); font-weight: 600; }
+.toc summary { cursor: pointer; }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--rule); }
+.toc li { margin: 0; }
+.toc a { display: block; padding: 0.32rem 0 0.32rem 0.9rem; text-decoration: none; color: var(--quiet); margin-left: -1px; border-left: 1px solid transparent; }
+.toc a:hover { color: var(--rubric); border-left-color: var(--rubric); }
+.toc-narrow { margin-bottom: 2rem; padding: 0.9rem 1rem; background: var(--wash); border-radius: 4px; max-width: var(--measure); }
+.toc-narrow summary { margin: 0; }
+.toc-narrow[open] summary { margin-bottom: 0.7rem; }
+
+/* Headings and their rubrics */
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.22; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.12; margin: 0 0 1.4rem; letter-spacing: -0.012em; }
+h2 { font-size: 1.5rem; margin: 3.2rem 0 0.9rem; }
+h3 { font-size: 1.17rem; margin: 2.3rem 0 0.6rem; }
+h2, h3 { position: relative; }
+.cite-mark { color: var(--rubric); text-decoration: none; font-weight: 400; margin-right: 0.35em; opacity: 0.55; }
+.cite-mark:hover, h2:hover .cite-mark, h3:hover .cite-mark { opacity: 1; }
+@media (min-width: 64rem) {
+  .cite-mark { position: absolute; right: 100%; margin-right: 0.9rem; opacity: 0.85; }
+}
+
+/* Text */
+p, ul, ol, table, pre, figure, blockquote { margin: 0 0 1.25rem; }
+.text > p:first-of-type + p, h1 + p { color: var(--ink); }
+.lead { font-size: 1.24rem; line-height: 1.55; }
+.part-of { font-family: var(--sans); font-size: 0.9rem; color: var(--quiet); margin-bottom: 0.9rem; }
+ul, ol { padding-left: 1.4rem; }
+li { margin-bottom: 0.5rem; }
+li > ul, li > ol { margin: 0.5rem 0 0; }
+li > ul > li { color: var(--quiet); font-size: 0.97em; list-style: none; margin-left: -1.1rem; }
+strong { font-weight: 700; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 1.5rem; }
+hr + p { font-family: var(--sans); font-size: 0.88rem; color: var(--quiet); }
+blockquote { margin-left: 0; padding-left: 1.2rem; border-left: 2px solid var(--rubric); }
+
+/* The byline directly under a document title */
+h1 + p { font-family: var(--sans); font-size: 0.92rem; color: var(--quiet); margin-bottom: 2.4rem; }
+.kind-home h1 + p, .kind-essays h1 + p, .kind-about h1 + p, .kind-section h1 + p, .kind-notfound h1 + p { font-family: var(--serif); color: var(--ink); }
+.kind-section h1 + p, .kind-about h1 + p { font-size: inherit; margin-bottom: 1.25rem; }
+
+/* Code, tables, diagrams */
+code { font-family: var(--mono); font-size: 0.84em; background: var(--wash); padding: 0.1em 0.32em; border-radius: 3px; overflow-wrap: anywhere; }
+pre { background: var(--wash); padding: 1rem 1.1rem; border-radius: 4px; overflow-x: auto; font-size: 0.82rem; line-height: 1.55; }
+pre code { background: none; padding: 0; font-size: inherit; overflow-wrap: normal; }
+.table-scroll { overflow-x: auto; margin: 0 0 1.5rem; }
+table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 0.9rem; line-height: 1.45; margin: 0; }
+th, td { text-align: left; vertical-align: top; padding: 0.6rem 0.9rem 0.6rem 0; border-bottom: 1px solid var(--rule); min-width: 8rem; }
+th { font-weight: 600; color: var(--quiet); border-bottom-color: var(--ink); }
+.diagram { margin: 1.8rem 0; overflow-x: auto; }
+.diagram pre.mermaid { background: none; padding: 0; text-align: left; font-size: 0.8rem; color: var(--quiet); white-space: pre; }
+.diagram pre.mermaid[data-processed] { color: inherit; }
+.diagram svg { max-width: 100%; height: auto; }
+
+/* Home */
+.hero { font-size: clamp(2.3rem, 7vw, 4.1rem); line-height: 1.04; letter-spacing: -0.022em; margin: 1.5rem 0 2.2rem; max-width: 13em; }
+.kind-home .text { max-width: 44rem; }
+.parts { list-style: none; padding: 0; counter-reset: none; border-top: 1px solid var(--rule); }
+.parts li { margin: 0; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); }
+.parts a { display: block; font-size: 1.28rem; font-weight: 700; text-decoration: none; }
+.parts a:hover { text-decoration: underline; text-decoration-color: var(--rubric); }
+.parts span { display: block; color: var(--quiet); font-size: 1rem; line-height: 1.5; margin-top: 0.2rem; }
+.plain { list-style: none; padding: 0; }
+.plain li { padding-left: 1.1rem; border-left: 2px solid var(--rule); }
+
+/* The Declaration is set a little larger, as the text the rest depends on */
+.at-declaration- .text { font-size: 1.08em; }
+.at-declaration- .text > p:last-of-type { font-size: 0.9rem; font-family: var(--sans); color: var(--quiet); border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: 2.5rem; }
+
+/* Essays */
+.essay-list { list-style: none; padding: 0; border-top: 1px solid var(--rule); }
+.essay-list li { padding: 1rem 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.essay-number { display: block; font-family: var(--sans); font-size: 0.85rem; color: var(--quiet); }
+.essay-list a { font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+.essay-list a:hover { text-decoration: underline; text-decoration-color: var(--rubric); }
+
+/* Previous and next within the charter */
+.sequence { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); font-size: 1rem; line-height: 1.35; }
+.sequence a { text-decoration: none; font-weight: 700; }
+.sequence a:hover { text-decoration: underline; text-decoration-color: var(--rubric); }
+.sequence a[rel="next"] { text-align: right; grid-column: 2; }
+.sequence span { display: block; font-family: var(--sans); font-weight: 400; font-size: 0.85rem; color: var(--quiet); margin-bottom: 0.2rem; }
+
+/* Colophon */
+.colophon { max-width: 68rem; margin: 0 auto; padding: 1.8rem 1.5rem 3.5rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 0.86rem; line-height: 1.55; color: var(--quiet); }
+.colophon p { margin: 0 0 0.5rem; max-width: 52rem; }
+@media (min-width: 64rem) { .colophon, .masthead { padding-left: 5.5rem; } }
+
+@media print {
+  .masthead nav, .toc, .sequence, .skip, .cite-mark { display: none !important; }
+  body { font-size: 11pt; background: #fff; color: #000; }
+  .frame { display: block; padding: 0; }
+  a { text-decoration: none; }
+  pre, table, figure { break-inside: avoid; }
+}
+
+/* Headings take focus when reached by a link, without drawing a box around them */
+h2:focus, h3:focus { outline: none; }
+td code, th code { overflow-wrap: normal; white-space: nowrap; }
