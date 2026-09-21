@@ -35,3 +35,4 @@ Initial drafting. Entries are in the order the changes were made.
 - **Licenses added.** CC BY 4.0 for the charter and general files; Apache 2.0 for the proposal. Reason: a charter meant to be adopted must be legally reusable, and implementers need a patent grant.
 - **Essay 00 added**, "A Promise Is Not Enough." Reason: to explain why the charter is needed, grounded in the OpenAI and METR reports on the July 2026 Hugging Face incident.
 - **Website added.** A static site is built from the canonical Markdown by a GitHub Actions workflow and served at intelligentsystemscharter.org. Reason: to give the charter a readable, citable home without creating a second copy of the text to maintain.
+- **Cookieless page-view counts added** to the website, using Umami, and the site's privacy statement rewritten to say exactly what is recorded. Reason: to learn whether and where the charter is read, without cookies, stored network addresses or tracking of individuals.

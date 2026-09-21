@@ -31,7 +31,9 @@ If you change the normative text, please publish your version under a different 
 
 ## This site
 
-The site is built directly from the Markdown files in the repository, which are the canonical source. It sets no cookies, runs no analytics and loads no fonts from third parties. Pages with diagrams load one open-source drawing library; without JavaScript the diagrams appear as readable text.
+The site is built directly from the Markdown files in the repository, which are the canonical source. It sets no cookies and loads no fonts from third parties. Pages with diagrams load one open-source drawing library; without JavaScript the diagrams appear as readable text.
+
+To learn whether the charter is being read, the site counts page views with [Umami](https://umami.is), an open-source analytics service. For each view it records the page, the referring site, the browser, device type and an approximate location (country, region and city) derived from the network address. It stores no network addresses and sets no cookies. To count unique visitors it keeps a one-way hash of the network address and browser, mixed with a secret value that changes every month, so a returning visitor cannot be recognized from one month to the next. Query strings are not collected, and if your browser sends a Do Not Track signal, nothing is recorded. Blocking the script has no effect on the site.
 
 ## Contact
 

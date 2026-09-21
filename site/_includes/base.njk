@@ -16,6 +16,7 @@
 <meta name="referrer" content="no-referrer">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+{% if site.umamiWebsiteId %}<script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiWebsiteId }}" data-domains="intelligentsystemscharter.org" data-exclude-search="true" data-exclude-hash="true" data-do-not-track="true"></script>{% endif %}
 </head>
 <body class="kind-{{ kind or 'page' }} at{{ page.url | replace('/', '-') }}">
 <a class="skip" href="#main">Skip to the text</a>
@@ -64,7 +65,7 @@
   <p>{{ site.title }}, version {{ site.version }}. Maintained by {{ site.author }}.
   {% if sourcePath %}The canonical text of this page is <a href="{{ site.repo }}/blob/main/{{ sourcePath }}"><code>{{ sourcePath }}</code></a> in the <a href="{{ site.repo }}">public repository</a>.{% else %}Source in the <a href="{{ site.repo }}">public repository</a>.{% endif %}</p>
   <p>The charter is free to share and adapt under <a href="/license/charter-cc-by-4.0.txt">CC BY 4.0</a>. The proposal is under the <a href="/license/proposal-apache-2.0.txt">Apache License 2.0</a>. <a href="/changelog/">Changelog</a>. <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-  <p>This site sets no cookies and runs no analytics.</p>
+  <p>This site sets no cookies. It counts page views with Umami, which stores no network addresses and does not follow visitors across sites. <a href="/about/#this-site">More</a>.</p>
 </footer>
 
 {% if hasMermaid %}
