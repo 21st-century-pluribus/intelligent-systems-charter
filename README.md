@@ -12,7 +12,7 @@ This repository is the canonical source for [intelligentsystemscharter.org](http
 | --- | --- |
 | [CHARTER.md](CHARTER.md) | The charter: Part I, the Declaration; Part II, the Universal Principles; Part III, the Constitution. Also a plain-language "how it works" and "what makes this different." |
 | [proposal/technical-implementation.md](proposal/technical-implementation.md) | A technology-agnostic proposal for enforcing the charter: charter baseline policies, adopter policies, Decision API contract, policy schema and reference implementation. |
-| [essays/](essays/) | Essays on why the charter exists. Start with [00: A Promise Is Not Enough](essays/00_a-promise-is-not-enough.md), then [01: The Law Must Arrive First](essays/01_the-law-must-arrive-first.md). |
+| [essays/](essays/) | Essays on why the charter exists. Start with [00: A Promise Is Not Enough](essays/00_a-promise-is-not-enough.md), then [01: The Law Must Arrive First](essays/01_the-law-must-arrive-first.md) and [02: A Brain Is Not a Body](essays/02_a-brain-is-not-a-body.md). |
 | [CHANGELOG.md](CHANGELOG.md) | Version history with the rationale for each change. |
 | [LICENSE](LICENSE), [proposal/LICENSE](proposal/LICENSE) | CC BY 4.0 for the charter; Apache 2.0 for the proposal. |
 
