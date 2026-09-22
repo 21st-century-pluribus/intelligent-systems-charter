@@ -21,6 +21,8 @@ const sectionSlug = (title) => (SECTION_SLUGS.find(([re]) => re.test(title)) || 
 
 const firstHeading = (text) => (text.match(/^#\s+(.+)$/m) || [null, "Untitled"])[1].trim();
 const stripTags = (html) => html.replace(/<[^>]+>/g, "").replace(/\u00A7/g, "").trim();
+// Essay headings read "Topic: subtitle". The topic alone is what the sequence links show.
+const essayTopic = (title) => title.split(":")[0].trim();
 
 const essayFiles = fs.readdirSync(path.join(ROOT, "essays")).filter((f) => f.endsWith(".md")).sort();
 const essayUrl = (file) => `/essays/${file.replace(/\.md$/, "").replace(/^\d+_/, "")}/`;
@@ -108,9 +110,31 @@ module.exports = function () {
   docs.push(page({ url: "/proposal/", sourcePath: "proposal/technical-implementation.md", markdown: read("proposal/technical-implementation.md"), kind: "proposal" }));
   docs.push(page({ url: "/changelog/", sourcePath: "CHANGELOG.md", markdown: read("CHANGELOG.md"), kind: "changelog" }));
 
-  essayFiles.forEach((file) => {
-    const number = (file.match(/^(\d+)_/) || [null, ""])[1];
-    docs.push(page({ url: essayUrl(file), sourcePath: `essays/${file}`, markdown: read(`essays/${file}`), kind: "essay", extra: { number } }));
+  // Essays, in file order, each linked to the one before and after it.
+  const essays = essayFiles.map((file) => {
+    const markdown = read(`essays/${file}`);
+    return {
+      file,
+      markdown,
+      number: (file.match(/^(\d+)_/) || [null, ""])[1],
+      topic: essayTopic(firstHeading(markdown)),
+    };
+  });
+  const essayLink = (e) => ({ title: e.topic, url: essayUrl(e.file), number: e.number });
+  essays.forEach((e, i) => {
+    docs.push(
+      page({
+        url: essayUrl(e.file),
+        sourcePath: `essays/${e.file}`,
+        markdown: e.markdown,
+        kind: "essay",
+        extra: {
+          number: e.number,
+          prev: i > 0 ? essayLink(essays[i - 1]) : null,
+          next: i < essays.length - 1 ? essayLink(essays[i + 1]) : null,
+        },
+      })
+    );
   });
 
   return docs;

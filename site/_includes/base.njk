@@ -53,9 +53,10 @@
     {{ content | safe }}
 
     {% if doc and (doc.prev or doc.next) %}
-    <nav class="sequence" aria-label="Charter sections">
-      {% if doc.prev %}<a rel="prev" href="{{ doc.prev.url }}"><span>Previous</span>{{ doc.prev.title }}</a>{% else %}<span></span>{% endif %}
-      {% if doc.next %}<a rel="next" href="{{ doc.next.url }}"><span>Next</span>{{ doc.next.title }}</a>{% endif %}
+    {% set isEssay = doc.kind == 'essay' %}
+    <nav class="sequence" aria-label="{{ 'Essays' if isEssay else 'Charter sections' }}">
+      {% if doc.prev %}<a rel="prev" href="{{ doc.prev.url }}"><span>{{ 'Previous essay' if isEssay else 'Previous' }}</span>{{ doc.prev.title }}</a>{% else %}<span></span>{% endif %}
+      {% if doc.next %}<a rel="next" href="{{ doc.next.url }}"><span>{{ 'Next essay' if isEssay else 'Next' }}</span>{{ doc.next.title }}</a>{% endif %}
     </nav>
     {% endif %}
   </article>
