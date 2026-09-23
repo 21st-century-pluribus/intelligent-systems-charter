@@ -12,7 +12,7 @@ The Intelligent Systems Charter is an independent, vendor-neutral text. It is no
 
 - [The charter](/charter/): the Declaration, the Universal Principles and the Constitution. These are the founding texts and they change rarely.
 - [The proposal](/proposal/): one way to enforce the charter in running software. The charter binds; the proposal suggests. Where they disagree, the charter governs.
-- [Essays](/essays/): the case for the charter.
+- [Essays](/essays/): the case for the charter. And more.
 - [Changelog](/changelog/): every change, with the reason for it.
 
 ## Adopting it
