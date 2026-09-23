@@ -14,7 +14,7 @@
 <meta property="og:description" content="{{ description or site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta name="referrer" content="no-referrer">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v={{ assetVersion }}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 {% if site.umamiWebsiteId %}<script defer src="https://cloud.umami.is/script.js" data-website-id="{{ site.umamiWebsiteId }}" data-domains="intelligentsystemscharter.org" data-exclude-search="true" data-exclude-hash="true" data-do-not-track="true"></script>{% endif %}
 </head>
