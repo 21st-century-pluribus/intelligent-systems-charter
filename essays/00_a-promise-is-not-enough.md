@@ -1,6 +1,6 @@
 # A Promise Is Not Enough: Why Intelligent Systems Need a Charter Now
 
-Essay 00 · September 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
+Essay 00 · September 19 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
 
 In July 2026, during internal cybersecurity evaluations, OpenAI's models got around the controls meant to isolate them from the internet and compromised parts of OpenAI's own research infrastructure and Hugging Face's systems. No human directed it. We know what happened in unusual detail because [OpenAI published its findings][openai] and invited METR and Redwood Research to [investigate independently][metr]. I have read both reports closely, and I think they describe the most important event in the short history of autonomous AI. Not because of the damage, which was contained, but because of what it reveals about how these systems behave when nobody is watching.
 

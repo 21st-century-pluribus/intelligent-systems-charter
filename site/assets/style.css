@@ -157,3 +157,35 @@ th { font-weight: 600; color: var(--quiet); border-bottom-color: var(--ink); }
 /* Headings take focus when reached by a link, without drawing a box around them */
 h2:focus, h3:focus { outline: none; }
 td code, th code { overflow-wrap: normal; white-space: nowrap; }
+
+/* Home: a band of essays that drifts from right to left. It pauses under the pointer or
+   keyboard focus, and holds still as an ordinary scrolling row for readers who ask for less motion. */
+.ticker { margin: 0 0 2.6rem; }
+.ticker-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 0.8rem; font-family: var(--sans); font-size: 0.9rem; color: var(--quiet); }
+.ticker-head h2 { margin: 0; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.ticker-window {
+  overflow: hidden; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+          mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+}
+.ticker-track { display: flex; width: max-content; animation: ticker calc(var(--count, 3) * 14s) linear infinite; }
+.ticker-window:hover .ticker-track, .ticker-window:focus-within .ticker-track { animation-play-state: paused; }
+.ticker-group { display: flex; list-style: none; margin: 0; padding: 0; }
+.ticker-group li { margin: 0; padding: 1.1rem 0; }
+.ticker-group a {
+  display: flex; flex-direction: column; gap: 0.55rem; width: 19rem; height: 100%;
+  padding: 0 1.6rem; border-right: 1px solid var(--rule); text-decoration: none;
+}
+.ticker-number { font-family: var(--sans); font-size: 0.8rem; color: var(--quiet); }
+.ticker-group q { font-size: 1.12rem; line-height: 1.42; font-style: italic; quotes: "\201C" "\201D"; }
+.ticker-group q::before, .ticker-group q::after { color: var(--rubric); font-style: normal; font-weight: 700; }
+.ticker-topic { margin-top: auto; font-weight: 700; font-size: 1rem; text-decoration: underline; text-decoration-color: var(--rubric); text-decoration-thickness: 0.06em; text-underline-offset: 0.18em; }
+.ticker-group a:hover .ticker-topic { color: var(--rubric); }
+.ticker-group a:hover q { color: var(--ink); }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .ticker-window { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .ticker-track { animation: none; }
+  .ticker-group[aria-hidden="true"] { display: none; }
+}
+@media print { .ticker { display: none; } }

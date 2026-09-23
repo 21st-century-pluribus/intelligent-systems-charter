@@ -1,6 +1,6 @@
 # The Law Must Arrive First: Regulation Before AGI
 
-Essay 01 · September 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
+Essay 01 · September 21 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
 
 The Intelligent Systems Charter has a weakness, and it is the same weakness as every charter before it: nobody has to follow it. An adopter commits to it or does not. An implementer builds the checkpoints or does not. The charter can say that every action must be checked, recorded and stoppable, and a laboratory can nod and leave the checkpoints switched off. That is not a hypothetical. It is what happened in July.
 

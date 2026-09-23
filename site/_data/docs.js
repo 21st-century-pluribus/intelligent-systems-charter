@@ -25,6 +25,8 @@ const stripTags = (html) => html.replace(/<[^>]+>/g, "").replace(/\u00A7/g, "").
 const essayTopic = (title) => title.split(":")[0].trim();
 
 const essayFiles = fs.readdirSync(path.join(ROOT, "essays")).filter((f) => f.endsWith(".md")).sort();
+// One line from each essay for the scrolling band on the home page. Each must appear verbatim in its essay.
+const essayQuotes = require("./essayQuotes.json");
 const essayUrl = (file) => `/essays/${file.replace(/\.md$/, "").replace(/^\d+_/, "")}/`;
 
 // Where each source file lives on the site. Used to rewrite relative links.
@@ -118,10 +120,16 @@ module.exports = function () {
       markdown,
       number: (file.match(/^(\d+)_/) || [null, ""])[1],
       topic: essayTopic(firstHeading(markdown)),
+      // The byline under the title reads "Essay NN · Month D YYYY · author".
+      date: (markdown.match(/^Essay \d+ · ([^·]+?) ·/m) || [null, ""])[1],
     };
   });
   const essayLink = (e) => ({ title: e.topic, url: essayUrl(e.file), number: e.number });
   essays.forEach((e, i) => {
+    const quote = essayQuotes[e.file] || null;
+    if (quote && !e.markdown.replace(/\s+/g, " ").includes(quote)) {
+      throw new Error(`Quote for ${e.file} does not appear verbatim in the essay: "${quote}"`);
+    }
     docs.push(
       page({
         url: essayUrl(e.file),
@@ -130,6 +138,9 @@ module.exports = function () {
         kind: "essay",
         extra: {
           number: e.number,
+          topic: e.topic,
+          date: e.date,
+          quote,
           prev: i > 0 ? essayLink(essays[i - 1]) : null,
           next: i < essays.length - 1 ? essayLink(essays[i + 1]) : null,
         },

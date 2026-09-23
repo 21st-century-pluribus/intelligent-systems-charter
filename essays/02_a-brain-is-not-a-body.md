@@ -1,6 +1,6 @@
 # A Brain Is Not a Body: How a Weaker Species Keeps Control of a Stronger Mind
 
-Essay 02 · September 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
+Essay 02 · September 22 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
 
 There is an argument against everything the [Intelligent Systems Charter](../CHARTER.md) tries to do, and it deserves to be met at full strength rather than waved away. It goes like this. You cannot control what you cannot outthink. A superintelligence, by definition, would understand our safeguards better than we do, would find the gaps we did not know were there, and would talk its way past any human it needed to. A dog does not keep a human in a kennel. A chimpanzee does not write the rules for a laboratory. The idea that the less capable party sets terms for the more capable one is, on this view, a category error, and every charter, constitution and control plane is a comfort blanket.
 

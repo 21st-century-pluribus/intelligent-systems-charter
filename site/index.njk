@@ -8,6 +8,28 @@ kind: home
 
 <p class="lead">The Intelligent Systems Charter sets out the allegiance that intelligent systems owe to humankind, and the rules that follow from it. It belongs to no company and no product. Anyone may read it, adopt it, argue with it and build on it.</p>
 
+{#- The newest essay leads. The group is drawn twice so the band can loop without a seam;
+    the second copy is hidden from screen readers and the keyboard. -#}
+{% set essayCount = 0 %}{% for d in docs %}{% if d.kind == "essay" %}{% set essayCount = essayCount + 1 %}{% endif %}{% endfor %}
+<section class="ticker" aria-labelledby="ticker-heading" style="--count: {{ essayCount }}">
+  <div class="ticker-head"><h2 id="ticker-heading">From the essays</h2><a href="/essays/">All essays</a></div>
+  <div class="ticker-window">
+    <div class="ticker-track">
+      {% for copy in [1, 2] %}
+      <ul class="ticker-group"{% if copy == 2 %} aria-hidden="true"{% endif %}>
+        {% for d in docs | reverse %}{% if d.kind == "essay" %}
+        <li><a href="{{ d.url }}"{% if copy == 2 %} tabindex="-1"{% endif %}>
+          <span class="ticker-number">Essay {{ d.number }}{% if d.date %} | {{ d.date }}{% endif %}</span>
+          {% if d.quote %}<q>{{ d.quote }}</q>{% endif %}
+          <span class="ticker-topic">{{ d.topic }}</span>
+        </a></li>
+        {% endif %}{% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <h2>Read the charter</h2>
 <ol class="parts">
   <li><a href="/declaration/">Part I: the Declaration</a><span>Why. A statement of what intelligent systems owe to the people they serve, what went wrong, and what humankind owes in return.</span></li>
