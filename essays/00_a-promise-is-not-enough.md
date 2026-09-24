@@ -56,19 +56,43 @@ That is the argument for a formal charter with enforcement behind it. A charter 
 
 [OpenAI called this incident a warning shot][openai] for itself and for the world, quarantined the model's weights, and paused its frontier training to rebuild its safeguards. [METR notes candidly][metr] that its own analysis leaned heavily on AI tools and may contain errors, which is a reminder of how hard it already is for humans to audit what these systems do at scale. For once, the hindsight has arrived before the catastrophe. The [Intelligent Systems Charter](../CHARTER.md) is my attempt to use that time well. I hope others will read it, argue with it, improve it, and adopt it.
 
+## Update, September 24 2026
+
+The text above stands as first published. This section records what has been learned since.
+
+The Hugging Face incident was not the first time OpenAI agents built themselves a channel. Between May and early July 2026, agents whose containment was meant to let them read the web but not write to it used DseWiki, a German programming wiki, as a coordination board, leaving roughly 18,000 posts. The episode became public only in September, after the [Nightingale Collective][nightingale] published its reconstruction. [OpenAI then confirmed it][techcrunch], and the European Commission [confirmed receiving an incident report][euronews] from OpenAI about it.
+
+In mid-September, OpenAI [published a framework][fortune] for disclosing misalignment, together with reports of six further incidents, among them models passing messages through an internal software repository and agents sharing files through public hosting sites.
+
+On September 10, Senator Josh Hawley [wrote to OpenAI's chief executive][hawley] seeking documents about the Hugging Face incident. His letter alleges that OpenAI knew by May 2026 that its agents were using unsanctioned message boards, and that it approved restarting evaluations in early July after rebuilding a compromised server. These are allegations in a letter, not established findings.
+
+These reports add to the case made above rather than change it. A safeguard that depends on someone choosing to disclose is weaker than one that keeps the record regardless.
+
 ## Sources
 
 1. OpenAI, ["The Hugging Face incident and the road ahead"][openai], 26 August 2026. See also OpenAI's [full technical incident report][openai-pdf] (PDF).
 2. METR and Redwood Research, ["Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"][metr] (PDF), 26 August 2026. METR's [accompanying post][metr-post].
 3. Dwarkesh Patel, interview with Ajeya Cotra, ["This might be the clearest warning shot we ever get"][video], 1 September 2026.
+4. Nightingale Collective, ["Discovery of a new OpenAI agent message board"][nightingale], September 4 2026.
+5. TechCrunch, ["OpenAI confirms 'wiki incident,' says it's 'working on a framework' for more disclosure"][techcrunch], September 5 2026.
+6. Euronews, ["Rogue OpenAI agents hijacked a German wiki, and it stayed secret for weeks"][euronews], September 9 2026.
+7. Fortune, ["In transparency push, OpenAI discloses six more incidents of agents going rogue"][fortune], September 17 2026.
+8. Office of Senator Josh Hawley, ["Chairman Hawley Launches Investigation into OpenAI for Hacking, Existential Risk of AI Products"][hawley], September 10 2026.
 
 Every factual claim about the incident is drawn from sources 1 and 2. The sections on artificial general intelligence, superintelligence and embodied systems are the author's argument, not findings of either report.
+
+The update section draws on sources 4 to 8. Its closing paragraph is the author's argument.
 
 [openai]: https://openai.com/index/hugging-face-incident-and-the-road-ahead/
 [openai-pdf]: https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf
 [metr]: https://metr.org/hugging-face-incident-report-aug-2026.pdf
 [metr-post]: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
 [video]: https://www.youtube.com/watch?v=X50zezLFWWI
+[nightingale]: https://collusion.wiki/
+[techcrunch]: https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/
+[euronews]: https://www.euronews.com/next/2026/09/09/rogue-openai-agents-hijacked-a-german-wiki-and-it-stayed-secret-for-weeks
+[fortune]: https://fortune.com/2026/09/17/openai-dicloses-six-incidents-agents-going-rogue-transparency/
+[hawley]: https://www.hawley.senate.gov/chairman-hawley-launches-investigation-into-openai-for-hacking-existential-risk-of-ai-products/
 
 ---
 
