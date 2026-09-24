@@ -145,7 +145,7 @@ We do not need to be smarter than what we build. We need to be careful about wha
 7. Bai, Y., et al., ["Constitutional AI: Harmlessness from AI Feedback"][cai], arXiv (2022).
 8. Hubinger, E., et al., ["Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training"][sleeper], arXiv (2024).
 9. Greenblatt, R., et al., ["Alignment Faking in Large Language Models"][faking], arXiv (2024).
-10. OpenAI, ["The Hugging Face incident and the road ahead"][openai], 26 August 2026.
+10. OpenAI, ["The Hugging Face incident and the road ahead"][openai], August 26 2026.
 
 Sources 1 to 6 are peer-reviewed. Sources 7 to 9 are preprints from industry research groups and are cited for their empirical findings. Facts about the July 2026 incident come from source 10 and from the METR report cited in [Essay 00](00_a-promise-is-not-enough.md). The twelve constraints, the layered framework and the argument are the author's.
 

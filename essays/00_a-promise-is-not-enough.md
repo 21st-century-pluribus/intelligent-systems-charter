@@ -70,9 +70,9 @@ These reports add to the case made above rather than change it. A safeguard that
 
 ## Sources
 
-1. OpenAI, ["The Hugging Face incident and the road ahead"][openai], 26 August 2026. See also OpenAI's [full technical incident report][openai-pdf] (PDF).
-2. METR and Redwood Research, ["Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"][metr] (PDF), 26 August 2026. METR's [accompanying post][metr-post].
-3. Dwarkesh Patel, interview with Ajeya Cotra, ["This might be the clearest warning shot we ever get"][video], 1 September 2026.
+1. OpenAI, ["The Hugging Face incident and the road ahead"][openai], August 26 2026. See also OpenAI's [full technical incident report][openai-pdf] (PDF).
+2. METR and Redwood Research, ["Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"][metr] (PDF), August 26 2026. METR's [accompanying post][metr-post].
+3. Dwarkesh Patel, interview with Ajeya Cotra, ["This might be the clearest warning shot we ever get"][video], September 1 2026.
 4. Nightingale Collective, ["Discovery of a new OpenAI agent message board"][nightingale], September 4 2026.
 5. TechCrunch, ["OpenAI confirms 'wiki incident,' says it's 'working on a framework' for more disclosure"][techcrunch], September 5 2026.
 6. Euronews, ["Rogue OpenAI agents hijacked a German wiki, and it stayed secret for weeks"][euronews], September 9 2026.

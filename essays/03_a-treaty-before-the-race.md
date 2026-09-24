@@ -76,13 +76,13 @@ The warning shot has been fired. The scientific bodies exist. Two rivals have al
 ## Sources
 
 1. Human Rights Watch, ["Precedent for Preemption: The Ban on Blinding Lasers as a Model for a Killer Robots Prohibition"][hrw], November 2015.
-2. Convention on Certain Conventional Weapons, [Protocol IV on Blinding Laser Weapons][protocol] (text), adopted 13 October 1995.
+2. Convention on Certain Conventional Weapons, [Protocol IV on Blinding Laser Weapons][protocol] (text), adopted October 13 1995.
 3. CASRAI, ["UN AI Governance: What's Happened So Far"][casrai], September 2026, on UN Resolution A/RES/79/325.
-4. European External Action Service, ["EU Statement – UN Global Dialogue on Artificial Intelligence Governance"][eeas], 7 July 2026.
+4. European External Action Service, ["EU Statement – UN Global Dialogue on Artificial Intelligence Governance"][eeas], July 7 2026.
 5. FEBIS, ["EU Endorses First International Treaty on AI Governance"][febis], March 2026, on the Council of Europe Framework Convention.
 6. CSIS, ["What the UN Global Dialogue on AI Governance Reveals About Global Power Shifts"][csis], October 2025.
-7. Reuters, ["Biden, Xi agree that humans, not AI, should control nuclear arms"][reuters], 16 November 2024.
-8. OpenAI, ["The Hugging Face incident and the road ahead"][openai], 26 August 2026.
+7. Reuters, ["Biden, Xi agree that humans, not AI, should control nuclear arms"][reuters], November 16 2024.
+8. OpenAI, ["The Hugging Face incident and the road ahead"][openai], August 26 2026.
 
 The historical treaties named without links (Westphalia, Versailles, the Partial Test Ban Treaty, the Non-Proliferation Treaty and the 1986 Convention on Early Notification of a Nuclear Accident) are matters of general historical record. The six treaty provisions and the argument are the author's.
 

@@ -2,7 +2,7 @@
 
 Changes to the charter and the proposal, newest first. Each entry gives the reason, as Article IX of the constitution requires.
 
-## 0.1 (draft), 19 September 2026
+## 0.1 (draft), September 19 2026
 
 Initial drafting. Entries are in the order the changes were made.
 
@@ -41,3 +41,4 @@ Initial drafting. Entries are in the order the changes were made.
 - **Essay 03 added**, "A Treaty Before the Race." Reason: to argue that international agreement on control mechanisms must precede the race to advanced AI, since a race whose prize may be uncontrollable leaves no winner to write the peace.
 - **Essay 04 added**, "A License Plate for Every Agent." Reason: to respond to the Stop Rogue AI Act, introduced in the House in September 2026, by supporting its identity and control requirements and setting out, with the German wiki incident as evidence, the mediation, evidence, pause, lineage and evaluation-environment controls its standards should add, and to offer the charter and proposal as open input to that standards process.
 - **Essay 00 updated** with a dated section on later findings: the German wiki incident and its disclosure, OpenAI's misalignment disclosure framework and further incidents, and Senator Hawley's inquiry, marked as allegations. The original text is unchanged. Reason: to keep the record current, as the charter's evidence principle (Article VII) asks of any account of what systems did.
+- **Dates written as "Month D YYYY"** throughout the charter, the proposal, the changelog and the essays. Quoted titles and the license texts are unchanged. Reason: to use one date format everywhere on the site.

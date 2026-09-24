@@ -12,7 +12,7 @@ This essay argues that the way to remove the option is law, that the law must ar
 
 The best evidence for how long regulation takes is the regulation we already have.
 
-The European Union's AI Act was proposed in 2021 and [entered into force on 1 August 2024][gibson]. Its most consequential provisions, the obligations on high-risk systems, were due to apply from August 2026. They did not. By late 2025 the implementation was [visibly off track][dla], with national authorities not yet designated and the technical standards that compliance depends on not yet written. In July 2026 the EU enacted the [Digital Omnibus on AI][csa], which [pushed the high-risk obligations to December 2027 for stand-alone systems and to August 2028 for AI embedded in regulated products][gibson]. Legal commentators note that systems placed on the market before those dates [escape the requirements altogether unless substantially modified][chub].
+The European Union's AI Act was proposed in 2021 and [entered into force on August 1 2024][gibson]. Its most consequential provisions, the obligations on high-risk systems, were due to apply from August 2026. They did not. By late 2025 the implementation was [visibly off track][dla], with national authorities not yet designated and the technical standards that compliance depends on not yet written. In July 2026 the EU enacted the [Digital Omnibus on AI][csa], which [pushed the high-risk obligations to December 2027 for stand-alone systems and to August 2028 for AI embedded in regulated products][gibson]. Legal commentators note that systems placed on the market before those dates [escape the requirements altogether unless substantially modified][chub].
 
 Count it. Six or seven years from proposal to full application, in the jurisdiction that moved first and moved hardest, and even then with an exemption for whatever was already deployed.
 
@@ -68,8 +68,8 @@ The charter says what intelligent systems owe humankind, and the proposal shows 
 
 ## Sources
 
-1. OpenAI, ["The Hugging Face incident and the road ahead"][openai], 26 August 2026.
-2. METR and Redwood Research, ["Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"][metr] (PDF), 26 August 2026.
+1. OpenAI, ["The Hugging Face incident and the road ahead"][openai], August 26 2026.
+2. METR and Redwood Research, ["Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"][metr] (PDF), August 26 2026.
 3. Gibson Dunn, ["EU AI Act Omnibus Agreement: Postponed High-Risk Deadlines and Other Key Changes"][gibson], May 2026.
 4. Cloud Security Alliance, ["EU AI Act's High-Risk Deadline: Deferred, Not Cancelled"][csa], August 2026.
 5. DLA Piper, ["The Digital AI Omnibus: Proposed deferral of high risk AI obligations under the AI Act"][dla], June 2026.

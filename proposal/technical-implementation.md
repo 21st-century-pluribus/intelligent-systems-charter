@@ -1,6 +1,6 @@
 # Proposal for technical implementation of the Intelligent Systems Charter
 
-Version 0.1 (draft) · 19 September 2026 · Maintainer: [21st Century Pluribus](https://github.com/21st-century-pluribus)
+Version 0.1 (draft) · September 19 2026 · Maintainer: [21st Century Pluribus](https://github.com/21st-century-pluribus)
 
 ## Status of this proposal
 
