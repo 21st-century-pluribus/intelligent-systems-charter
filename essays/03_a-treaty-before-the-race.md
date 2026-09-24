@@ -1,4 +1,4 @@
-# A Treaty Before the Race
+# A Treaty Before the Race: Why Nations Must Agree on AI Controls Before Anyone Wins
 
 Essay 03 · September 23 2026 · [21st Century Pluribus](https://github.com/21st-century-pluribus)
 
