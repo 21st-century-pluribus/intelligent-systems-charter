@@ -52,6 +52,29 @@ function rewriteLinks(html, sourcePath) {
   });
 }
 
+// Lines that open a page but say nothing about it: essay bylines, version lines, "part of" notes.
+const PREAMBLE = [/^Essay \d+ · /, /^Version .* · Maintainer:/, /^From the /];
+const DESCRIPTION_MAX = 160;
+
+// The first real paragraph of prose, as plain text, for link previews. Headings, lists, tables,
+// quotes and code are not paragraphs at the top level, so markdown-it's own parse skips them.
+function describe(markdown) {
+  const tokens = md.parse(markdown, {});
+  for (let i = 0; i < tokens.length; i++) {
+    if (tokens[i].type !== "paragraph_open" || tokens[i].level !== 0) continue;
+    const text = tokens[i + 1].children
+      .map((t) => (t.type === "text" || t.type === "code_inline" ? t.content : t.type === "softbreak" || t.type === "hardbreak" ? " " : ""))
+      .join("")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!text || PREAMBLE.some((re) => re.test(text))) continue;
+    if (text.length <= DESCRIPTION_MAX) return text;
+    const cut = text.slice(0, DESCRIPTION_MAX - 1);
+    return cut.slice(0, cut.lastIndexOf(" ")).replace(/[\s,;:.\u2014-]+$/, "") + "\u2026";
+  }
+  return "";
+}
+
 function buildToc(html) {
   const pick = (level) =>
     [...html.matchAll(new RegExp(`<h${level} id="([^"]+)"[^>]*>([\\s\\S]*?)</h${level}>`, "g"))].map((m) => ({
@@ -70,6 +93,7 @@ function page({ url, sourcePath, markdown, kind, extra = {} }) {
     kind,
     sourcePath,
     title: firstHeading(markdown),
+    description: describe(markdown),
     html,
     toc: buildToc(html),
     hasMermaid: Boolean(env.hasMermaid),

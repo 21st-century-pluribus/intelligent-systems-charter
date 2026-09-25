@@ -7,6 +7,7 @@ class Pages {
       permalink: (data) => data.doc.url,
       eleventyComputed: {
         title: (data) => data.doc.title,
+        description: (data) => data.doc.description || data.site.description,
         toc: (data) => data.doc.toc,
         hasMermaid: (data) => data.doc.hasMermaid,
         sourcePath: (data) => data.doc.sourcePath,
