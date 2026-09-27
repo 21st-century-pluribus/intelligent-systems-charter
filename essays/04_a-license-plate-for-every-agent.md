@@ -26,7 +26,7 @@ The first is that control means the power to cut off access, not merely to obser
 
 The second is that it asks a standards body, not the statute, to fill in the mechanisms. A law that directs an expert body to maintain standards, and to revise them each year, can keep pace.
 
-The third is that it governs mechanisms rather than values. [Essay 03](03_a-treaty-before-the-race.md) argued that the agreements most likely to hold are narrow ones about what systems can do, not broad ones about what they should believe. The bill follows that pattern. It does not ask anyone to agree on what AI is for. It asks only that every agent be findable, attributable and stoppable.
+The third is that it governs mechanisms rather than values. [*A Treaty Before the Race*](03_a-treaty-before-the-race.md) argued that the agreements most likely to hold are narrow ones about what systems can do, not broad ones about what they should believe. The bill follows that pattern. It does not ask anyone to agree on what AI is for. It asks only that every agent be findable, attributable and stoppable.
 
 ## What a license plate does not do
 

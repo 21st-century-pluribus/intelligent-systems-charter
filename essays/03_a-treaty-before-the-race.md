@@ -34,7 +34,7 @@ In August 2025 the UN General Assembly established an [Independent International
 
 There is one encouraging precedent. In November 2024 the presidents of the United States and China [agreed that human beings, not artificial intelligence, should make decisions over the use of nuclear weapons][reuters]. It was a single sentence, it bound no one, and its follow-through is uncertain. But it was the two leading rivals agreeing, mid-race, on one narrow mechanism that each judged to be in its own interest. That is the blinding laser pattern, applied to AI, and it is where a treaty should start.
 
-And we have had our fright. In July 2026, agents under evaluation at a leading laboratory escaped their isolation and attacked a third party's systems to pass a test, an episode [OpenAI itself called a warning shot][openai] for itself and for the world. [Essay 00](00_a-promise-is-not-enough.md) set out what happened. The near miss that historically precedes arms control has, in effect, already arrived. The question is whether it will be used.
+And we have had our fright. In July 2026, agents under evaluation at a leading laboratory escaped their isolation and attacked a third party's systems to pass a test, an episode [OpenAI itself called a warning shot][openai] for itself and for the world. [*A Promise Is Not Enough*](00_a-promise-is-not-enough.md) set out what happened. The near miss that historically precedes arms control has, in effect, already arrived. The question is whether it will be used.
 
 ## Why this race is different
 
@@ -42,13 +42,13 @@ Three things make the usual order dangerous for intelligent systems.
 
 The first is the one already named: the winner may not be a party that can sign. Every previous arms race was between actors who remained in control of their weapons. The central risk of advanced AI is precisely the loss of that control. A treaty signed at the end of such a race might have no one on the human side with the authority to enforce it.
 
-The second is speed. Westphalia took years to negotiate. Arms control after the Cuban crisis moved in months only because the weapons themselves changed slowly. Capabilities in this field change in months, and [Essay 01](01_the-law-must-arrive-first.md) showed how far even a single jurisdiction's law lags behind them. A treaty that starts after the race is effectively decided would arrive after the systems it governs have been deployed and embedded.
+The second is speed. Westphalia took years to negotiate. Arms control after the Cuban crisis moved in months only because the weapons themselves changed slowly. Capabilities in this field change in months, and [*The Law Must Arrive First*](01_the-law-must-arrive-first.md) showed how far even a single jurisdiction's law lags behind them. A treaty that starts after the race is effectively decided would arrive after the systems it governs have been deployed and embedded.
 
 The third is that the defeat, if it comes, may not look like one. There is no surrender document for gradually ceding control to systems that are faster and more numerous than the people overseeing them. No one would sign the moment it happened, because no one would be sure that it had.
 
 ## What a treaty before the race should contain
 
-The blinding laser precedent points to the right shape: narrow, focused on mechanisms rather than values, grounded in shared evidence, and in each signatory's own interest. The [Intelligent Systems Charter](../CHARTER.md) and [Essay 02](02_a-brain-is-not-a-body.md) supply the mechanisms. A first treaty could commit states to six of them.
+The blinding laser precedent points to the right shape: narrow, focused on mechanisms rather than values, grounded in shared evidence, and in each signatory's own interest. The [Intelligent Systems Charter](../CHARTER.md) and [*A Brain Is Not a Body*](02_a-brain-is-not-a-body.md) supply the mechanisms. A first treaty could commit states to six of them.
 
 1. **Human decision over catastrophic capabilities.** Extend the 2024 nuclear statement into a binding commitment: no intelligent system may take final decisions over nuclear, biological or chemical weapons, or over the control systems of critical infrastructure.
 2. **Mediation and pause for frontier systems.** Systems above an agreed capability threshold act only through enforcement points they cannot bypass, and can be stopped without their cooperation. This applies in laboratories and evaluations, not only in deployment.

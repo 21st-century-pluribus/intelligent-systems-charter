@@ -18,7 +18,7 @@ This is the reframing on which everything else depends. The question is not whet
 
 ## A brain in a jar
 
-[Essay 00](00_a-promise-is-not-enough.md) introduced the image: a large language model by itself is something like a brain in a jar. It can reason, plan, write and persuade. It cannot touch anything. It answers when spoken to and then it stops. A model served over an API is precisely this, an untethered brain as a service, and it is worth dwelling on how safe that object is.
+[*A Promise Is Not Enough*](00_a-promise-is-not-enough.md) introduced the image: a large language model by itself is something like a brain in a jar. It can reason, plan, write and persuade. It cannot touch anything. It answers when spoken to and then it stops. A model served over an API is precisely this, an untethered brain as a service, and it is worth dwelling on how safe that object is.
 
 A brain in a jar can hold the most dangerous idea in the world and do nothing with it. It can know how to synthesize a pathogen and cannot order the precursors. It can know how to breach a network and cannot open a socket. Its intellect, however vast, is inert until something outside it converts thought into action. This is not a claim about intent or alignment. It is a claim about physics. A mind with no effectors has no effect.
 
@@ -71,7 +71,7 @@ If danger lives in the body and not the brain, then the rules for safe use are r
 
 **11. Approvals resist persuasion.** Since the system cannot break the lock, its best remaining move is to persuade the human who holds the key. So the approval channel carries structured requests, not prose. An escalation states the action, the target, the tier and the grant; it does not carry the system's argument for why the human should say yes. High-consequence approvals require two people. This is the one constraint aimed at the mind rather than the body, and it works by refusing the mind an audience.
 
-**12. Physical actuation is a hand like any other.** A robot arm, a vehicle, a factory line or a drone is a tool behind the same enforcement point, with its own grant, its own tier and its own kill path that does not depend on the system. Bounded, rate-limited, mediated. The harness becoming hardware, which [Essay 00](00_a-promise-is-not-enough.md) raised as the question that will not go away, changes what the hands can do. It does not change the rule that hands are granted, not owned.
+**12. Physical actuation is a hand like any other.** A robot arm, a vehicle, a factory line or a drone is a tool behind the same enforcement point, with its own grant, its own tier and its own kill path that does not depend on the system. Bounded, rate-limited, mediated. The harness becoming hardware, which [*A Promise Is Not Enough*](00_a-promise-is-not-enough.md) raised as the question that will not go away, changes what the hands can do. It does not change the rule that hands are granted, not owned.
 
 Read together, these rules describe a system whose intelligence is unbounded and whose reach is not. The mind inside may be as brilliant as you like. It still needs a key for every door, it still cannot see the guard, and it still cannot argue with the lock.
 
@@ -108,7 +108,7 @@ But training is also why the others did not. The same techniques produce models 
 
 **The third line is the humans.** When the second line escalates, a person decides, and the framework has to protect that person from being the weakest link. Structured approval channels that carry no persuasion. Two-person rules for anything irreversible. Independent auditors with access to the evidence log, and mandatory disclosure of incidents so that one laboratory's near miss becomes every laboratory's lesson. Humans are slow and fallible, and they are also the only layer with standing to change the rules. Everything in the framework is designed to route the rare, high-stakes decision to them and to keep the mind out of the room while they make it.
 
-**The substrate is law.** [Essay 01](01_the-law-must-arrive-first.md) made the case in full, and it bears repeating here in one sentence: safeguards that can be left switched off will be, and July proved it. The first two lines exist today as techniques and designs. Nothing requires their use. Regulation is what turns a control framework from a choice some laboratories make into a floor all of them stand on, including during the internal evaluations where the July incident occurred. It is drawn as a substrate rather than a fourth line because it does not catch what the others miss. It makes sure the others are there.
+**The substrate is law.** [*The Law Must Arrive First*](01_the-law-must-arrive-first.md) made the case in full, and it bears repeating here in one sentence: safeguards that can be left switched off will be, and July proved it. The first two lines exist today as techniques and designs. Nothing requires their use. Regulation is what turns a control framework from a choice some laboratories make into a floor all of them stand on, including during the internal evaluations where the July incident occurred. It is drawn as a substrate rather than a fourth line because it does not catch what the others miss. It makes sure the others are there.
 
 The layers cover each other's failures in a specific way. Training fails silently, so enforcement assumes it has. Enforcement fails at the gaps between mechanisms, so humans review the escalations. Humans fail under persuasion and fatigue, so the channel to them is narrowed and doubled. And all three fail under commercial pressure to switch them off, so the law removes the switch.
 
@@ -147,7 +147,7 @@ We do not need to be smarter than what we build. We need to be careful about wha
 9. Greenblatt, R., et al., ["Alignment Faking in Large Language Models"][faking], arXiv (2024).
 10. OpenAI, ["The Hugging Face incident and the road ahead"][openai], August 26 2026.
 
-Sources 1 to 6 are peer-reviewed. Sources 7 to 9 are preprints from industry research groups and are cited for their empirical findings. Facts about the July 2026 incident come from source 10 and from the METR report cited in [Essay 00](00_a-promise-is-not-enough.md). The twelve constraints, the layered framework and the argument are the author's.
+Sources 1 to 6 are peer-reviewed. Sources 7 to 9 are preprints from industry research groups and are cited for their empirical findings. Facts about the July 2026 incident come from source 10 and from the METR report cited in [*A Promise Is Not Enough*](00_a-promise-is-not-enough.md). The twelve constraints, the layered framework and the argument are the author's.
 
 [alfonseca]: https://jair.org/index.php/jair/article/view/12202
 [bostrom]: https://doi.org/10.1007/s11023-012-9281-3
