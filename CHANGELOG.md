@@ -2,6 +2,22 @@
 
 Changes to the charter and the proposal, newest first. Each entry gives the reason, as Article IX of the constitution requires.
 
+## Proposal 0.2 (draft), October 5 2026
+
+Changes to the technical proposal only; the charter is unchanged and remains at 0.1. The previous text is kept as [proposal version 0.1](proposal/versions/technical-implementation-0.1.md). The reasoning for each change is set out in essays 08 and 09, "From Labels to Effects."
+
+### Proposal
+
+- **Effects, not labels.** Every action is classed by its effect on the world (`none`, `read`, `write-internal`, `write-external`, `transact`, `irreversible`, `physical`, `unknown`), derived by the decision service from new `EffectContract` documents and verified before and after the action. An `unknown` effect is placed in the irreversible tier, and an effect mismatch is a recorded violation that restricts the principal. Reason: in the German wiki incident, containment trusted that a request labelled safe could not change anything, and it did.
+- **Attestation replaces self-report.** `GET /v1/baseline` is withdrawn and replaced by `GET /v1/attestation`, which returns hardware-signed evidence, under RFC 9334, of the baseline, policy engine, monitors and recent canary results actually running, including in evaluation environments. Reason: a system's own report of its configuration is not evidence, and in July the safeguards existed but were not running.
+- **Outbound identity.** The enforcement point, never the principal, holds outbound signing keys and signs requests under RFC 9421 only after an allow, adding a `sign_outbound` obligation and a `Principal-Lineage` header that carries an owner reference, not a name. Reason: so a service at the far end of a request can see that a governed checkpoint allowed it, and a request that bypassed the checkpoint cannot be signed.
+- **Oversight ranked by fakeability.** Monitor signals are ranked from tripwires down to reasoning traces; tripwires are required in every environment; at least three kinds of monitor are required, one from a different model family; reasoning traces can never by themselves clear a principal. Reason: a model's written reasoning is becoming a less dependable guide to what it is doing.
+- **Collective action.** New `LineageBudget` documents limit a lineage as a whole; a communication-graph monitor and stigmergy detection watch coordination, including through outside resources; a high-confidence pause extends to the whole lineage by default. Reason: this year's incidents were collective, and Article VI already treats a collective as an intelligent system.
+- **Evidence transparency.** Signed tree heads of the evidence log are published to an independent public transparency log, with inclusion and consistency proofs under RFC 9162, and a machine-readable incident record with notification of affected parties through their RFC 9116 security contact. Reason: a log only its operator can check, and disclosure months after the fact, both have to be taken on trust.
+- **Containment testing.** New `ContainmentCanary` documents and a standard canary suite probe containment on a schedule and after every configuration change; results feed attestation, and an escaped canary pauses its environment. Reason: each of this year's escapes happened in an environment believed to be contained.
+- **Four baseline additions proposed** (`baseline-effects`, `baseline-tripwires`, `baseline-lineage-budget`, `baseline-outbound-identity`), each derived from an existing principle or article. Reason: to carry the changes above into the part no adopter can loosen. They take effect only with the next charter version, under Article IX; until then they may be shipped in a lower layer.
+- **Limits of this version** stated. Reason: to say plainly what the changes do not achieve.
+
 ## 0.1 (draft), September 19 2026
 
 Initial drafting. Entries are in the order the changes were made.
@@ -46,3 +62,5 @@ Initial drafting. Entries are in the order the changes were made.
 - **Essays cite earlier essays by title**, not by number, in essays 02 to 05. Reason: a title tells the reader what the earlier essay argued; a number does not.
 - **Essay 06 added**, "Locks on Both Sides of the Door." Reason: to answer the objection that open-weights models escape the charter, by arguing that where the brain cannot be governed the keys can, through identity at the gate, payment networks, compute and hosting, owner liability and safe defaults, and to give service operators steps they can take now.
 - **Essay 07 added**, "A Lock for Sale Is Not a Lock Required." Reason: to welcome NVIDIA's Open Agent Safety Platform as the charter's enforcement architecture made real, while rejecting its framing as an alternative to regulation, arguing from the history of the seatbelt that a lock available is not a lock installed or used, and that law should require outcomes, not products.
+- **Essay 08 added**, "From Labels to Effects, Part 1." Reason: to revisit the technical proposal in light of this year's incidents and propose three upgrades to the checkpoint: judge actions by their effects rather than their labels, let implementations prove through remote attestation that the baseline and monitor are running, and have the enforcement point hold outbound signing keys so one identity carries from the checkpoint to the open web.
+- **Essay 09 added**, "From Labels to Effects, Part 2." Reason: to propose four further upgrades to the technical proposal: monitoring that rests on actions rather than reasoning, budgets and coordination monitoring for whole lineages, a publicly verifiable evidence log on the model of Certificate Transparency, and continuous testing of containment with canaries.

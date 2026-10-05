@@ -35,6 +35,7 @@ const ROUTES = {
   "CHANGELOG.md": "/changelog/",
   "README.md": "/about/",
   "proposal/technical-implementation.md": "/proposal/",
+  "proposal/versions/technical-implementation-0.1.md": "/proposal/0.1/",
   "LICENSE": "/license/charter-cc-by-4.0.txt",
   "proposal/LICENSE": "/license/proposal-apache-2.0.txt",
   "essays": "/essays/",
@@ -134,6 +135,8 @@ module.exports = function () {
   });
 
   docs.push(page({ url: "/proposal/", sourcePath: "proposal/technical-implementation.md", markdown: read("proposal/technical-implementation.md"), kind: "proposal" }));
+  // Earlier versions of the proposal, kept at their own addresses.
+  docs.push(page({ url: "/proposal/0.1/", sourcePath: "proposal/versions/technical-implementation-0.1.md", markdown: read("proposal/versions/technical-implementation-0.1.md"), kind: "proposal" }));
   docs.push(page({ url: "/changelog/", sourcePath: "CHANGELOG.md", markdown: read("CHANGELOG.md"), kind: "changelog" }));
 
   // Essays, in file order, each linked to the one before and after it.
