@@ -52,7 +52,7 @@ There is still one thing the charter's definitions do, even here. Under the char
 [Locks on Both Sides of the Door](06_locks-on-both-sides-of-the-door.md) argued that where you cannot govern every developer, you govern what every agent needs. For a self-replicating model, that means the devices it lands on and the networks it travels over. The Anthropic paper itself frames defense as epidemic control: push the number of new infections caused by each infection [below one][anthropic], and the worm dies out instead of becoming endemic. Each lock below lowers that number.
 
 ```mermaid
-flowchart LR
+flowchart TD
   A["Infected device"] -->|scans| B["Open debug port"]
   B -->|copies weights| C["New device"]
   C -->|reads notes, sets up model| A2["Next infection"]
